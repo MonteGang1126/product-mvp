@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin – Waitlist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">🔐 Admin – Waitlist</div>
+      <a href="/" style="color:#9fb0c3;text-decoration:none">← Home</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Waitlist имэйлүүд</h1>
+
+    {% if leads %}
+      <div class="card">
+        <table style="width:100%;border-collapse:collapse">
+          <tr style="text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">
+            <th>ID</th>
+            <th>Email</th>
+            <th>Created</th>
+          </tr>
+          {% for l in leads %}
+          <tr style="border-bottom:1px solid rgba(255,255,255,.05)">
+            <td>{{ l[0] }}</td>
+            <td>{{ l[1] }}</td>
+            <td style="color:#9fb0c3">{{ l[2] }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    {% else %}
+      <p>Одоогоор data байхгүй.</p>
+    {% endif %}
+  </main>
+</body>
+</html>

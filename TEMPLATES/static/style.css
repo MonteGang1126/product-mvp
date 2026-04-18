@@ -1,0 +1,89 @@
+/* --------- Base --------- */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: #0b1220;
+  color: #e6edf6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* --------- Header --------- */
+header {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background: rgba(11,18,32,0.85);
+  position: sticky;
+  top: 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+/* --------- Hero --------- */
+.hero {
+  padding: 60px 0;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #9fb0c3;
+  font-size: 18px;
+  max-width: 600px;
+}
+
+/* --------- Card --------- */
+.card {
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 24px;
+  background: rgba(255,255,255,0.03);
+  margin-top: 32px;
+}
+
+/* --------- Form --------- */
+form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.3);
+  color: #e6edf6;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6ee7ff;
+}
+
+button {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6ee7ff, #a78bfa);
+  color: #06101d;
+}
