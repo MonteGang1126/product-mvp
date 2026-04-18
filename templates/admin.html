@@ -1,0 +1,22 @@
+cat > admin.html << 'EOF'
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin</title>
+</head>
+<body>
+  <h1>Waitlist emails</h1>
+
+  {% if leads %}
+    <ul>
+      {% for l in leads %}
+        <li>{{ l[1] }} — {{ l[2] }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Одоогоор өгөгдөл алга.</p>
+  {% endif %}
+</body>
+</html>
+EOF
